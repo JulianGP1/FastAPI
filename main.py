@@ -42,3 +42,9 @@ def inicio():
 @api.get("/rutas") #metodo attp para optener algo
 def inicio(): 
     return rutas
+
+@api.get("/rutas/{id}")
+def consultar_ruta(id:int):
+    for ruta in rutas:
+        if ruta["id"]== id:
+            return ruta
